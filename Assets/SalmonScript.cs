@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class SalmonScript : MonoBehaviour
 {
-
+  public GameObject flock;
   // Start is called before the first frame update
   void Start()
   {
-
+    transform.parent = null;
   }
 
   // Update is called once per frame
   void Update()
   {
-    transform.rotation = transform.parent.rotation;
-    transform.position = Vector3.MoveTowards(transform.position, transform.parent.position, 2 * Time.deltaTime);
+    transform.rotation = flock.transform.rotation;
+    transform.position = Vector3.MoveTowards(transform.position, flock.transform.position, 2 * Time.deltaTime);
   }
+
+  void OnTriggerEnter2D(Collider2D col)
+  {
+    if (col.gameObject.tag == "Obstacle")
+    {
+      Destroy(this);
+    }
+
+  }
+
 }
