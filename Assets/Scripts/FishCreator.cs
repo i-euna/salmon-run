@@ -5,6 +5,8 @@ using UnityEngine;
 public class FishCreator : MonoBehaviour
 {
 
+  public static FishCreator instance;
+
   public GameObject fish;
   public List<GameObject> fishes;
   public LossScript loss;
@@ -13,6 +15,7 @@ public class FishCreator : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+        instance = this;
     FishManager.fish_amount = fish_amount + 1;
     for (int i = 0; i < fish_amount; i++)
     {

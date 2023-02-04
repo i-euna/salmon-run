@@ -25,7 +25,29 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayEffect(int Clip) {
+
         EffectSource.PlayOneShot(EffectClips[Clip]);
+        //EffectSource.mute = true;
+        //StartCoroutine(Mute(1));
+        //StartCoroutine(Unmute(4));
+    }
+
+    private IEnumerator Mute(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            EffectSource.mute = true;
+        }
+    }
+
+    private IEnumerator Unmute(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            EffectSource.mute = false;
+        }
     }
 
 

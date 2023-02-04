@@ -39,7 +39,7 @@ public class FlockManager : MonoBehaviour
     float distance = Vector2.Distance(transform.position, flock.position);
     if (distance > deathDistance)
     {
-      Debug.Log(FishManager.fish_amount);
+      //Debug.Log(FishManager.fish_amount);
       Die();
     }
   }
@@ -65,6 +65,9 @@ public class FlockManager : MonoBehaviour
 
   void Die()
   {
+    int index = FishCreator.instance.fishes.IndexOf(gameObject);
+    if (index != -1)
+       FishCreator.instance.fishes.Remove(FishCreator.instance.fishes[index]);
     Destroy(gameObject);
     FishManager.fish_amount -= 1;
   }

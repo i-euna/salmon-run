@@ -1438,6 +1438,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7553416674621546324, guid: 64e1e4693ec2a6148aa43183e00984b1, type: 3}
   m_PrefabInstance: {fileID: 7553416674358838676}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &822057667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822057662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03998053, y: 0.13405241}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5155299, y: 0.60960174}
+  m_EdgeRadius: 0
+--- !u!50 &822057668
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822057662}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &954194235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 786691433223082201, guid: ee54eff7f6b814f4a967e5203823179b, type: 3}
@@ -3375,6 +3422,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7553416674621546282, guid: 64e1e4693ec2a6148aa43183e00984b1, type: 3}
       propertyPath: m_Name
+      value: Flock
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553416674621546282, guid: 64e1e4693ec2a6148aa43183e00984b1, type: 3}
+      propertyPath: m_TagString
       value: Flock
       objectReference: {fileID: 0}
     - target: {fileID: 7553416674621546324, guid: 64e1e4693ec2a6148aa43183e00984b1, type: 3}
