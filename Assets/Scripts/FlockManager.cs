@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlockManager : MonoBehaviour
 {
+  public CameraScript cameraScript;
   private Vector2 mousePos;
   private Vector2 myPosition;
 
@@ -11,11 +12,15 @@ public class FlockManager : MonoBehaviour
 
   public Rigidbody2D rb;
   float speed = 2f;
+
+  [SerializeField]
+  bool isPrimal;
   // Start is called before the first frame update
   void Start()
   {
-    //float angle = Random.Range(0, 2 * Mathf.PI);
-    //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    FishManager.AddFish(gameObject);
+    if (isPrimal)
+      cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
   }
 
   // Update is called once per frame
@@ -43,8 +48,18 @@ public class FlockManager : MonoBehaviour
   {
     if (col.gameObject.tag == "Obstacle")
     {
+      if (FishManager.fishes.Count < 1)
+      {
+        Debug.Log(FishManager.fishes.Count);
+        cameraScript.player = cameraScript.mousePosition;
+      }
+      else
+      {
+        Debug.Log(FishManager.fishes.Count);
+        cameraScript.player = FishManager.fishes[0].transform;
+      }
+      FishManager.RemoveFish(gameObject);
       Destroy(gameObject);
-      FishManager.fish_amount -= 1;
     }
 
   }

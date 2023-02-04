@@ -5,19 +5,21 @@ using UnityEngine;
 public class FishCreator : MonoBehaviour
 {
 
+  public CameraScript cameraScript;
   public GameObject fish;
-  public List<GameObject> fishes;
+
   public LossScript loss;
 
   public int fish_amount;
   // Start is called before the first frame update
   void Start()
   {
+    cameraScript = GameObject.Find("Main Camera").GetComponent<CameraScript>();
     FishManager.fish_amount = fish_amount + 1;
     for (int i = 0; i < fish_amount; i++)
     {
       GameObject newFish = Instantiate(fish, fish.transform.position, fish.transform.rotation);
-      fishes.Add(newFish);
+      newFish.GetComponent<FlockManager>().cameraScript = cameraScript;
     }
   }
 
@@ -29,4 +31,5 @@ public class FishCreator : MonoBehaviour
       loss.Lose();
     }
   }
+
 }

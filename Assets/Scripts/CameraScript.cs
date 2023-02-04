@@ -4,6 +4,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
   public Transform player;
+  public Transform mousePosition;
   public Vector3 offset;
   [Range(1, 10)]
   public float smoothFactor;
