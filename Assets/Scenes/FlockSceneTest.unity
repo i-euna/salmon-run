@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308710583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 135.2, z: 0.0024912676}
+  m_LocalPosition: {x: -0.8, y: 36.9, z: 0.0024912676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36d26f2294214644aa9906206e3c816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverPanel: {fileID: 0}
+  GameOverPanel: {fileID: 717287154}
   isGameOver: 0
 --- !u!61 &308710586
 BoxCollider2D:
@@ -1125,15 +1125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9799d7b5b8108244a4c7b5c9503865b, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: -1}
   smoothFactor: 3.1
   minV: {x: -10, y: -5, z: -1}
-  maxV: {x: 10, y: 60, z: 0}
+  maxV: {x: 10, y: 140, z: 0}
 --- !u!114 &1813688625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,7 +2220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 276, y: -275}
+  m_AnchoredPosition: {x: 271.4, y: -277.3}
   m_SizeDelta: {x: 131.1092, y: 26.3625}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108190304
@@ -2258,7 +2258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0e2eff27a70a674789ac54dd2efffd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
