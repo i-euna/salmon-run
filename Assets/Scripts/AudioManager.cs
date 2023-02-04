@@ -22,32 +22,12 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        PlayBearEffect();
     }
 
-    public void PlayBearEffect() {
-        EffectSource.PlayOneShot(EffectClips[0]);
+    public void PlayEffect(int Clip) {
+        EffectSource.PlayOneShot(EffectClips[Clip]);
     }
 
-    public void PlayHumanMadeWasteEffect()
-    {
-        EffectSource.PlayOneShot(EffectClips[1]);
-    }
-
-    public void PlayLogEffect()
-    {
-        EffectSource.PlayOneShot(EffectClips[2]);
-    }
-
-    public void PlaySeagull()
-    {
-        EffectSource.PlayOneShot(EffectClips[3]);
-    }
-
-    public void PlayStone()
-    {
-        EffectSource.PlayOneShot(EffectClips[4]);
-    }
 
     public void PlayBackgroundMusic()
     {
