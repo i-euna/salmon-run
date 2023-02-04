@@ -38,4 +38,14 @@ public class FlockManager : MonoBehaviour
   {
     return Camera.main.ScreenToWorldPoint(Input.mousePosition);
   }
+
+  void OnTriggerEnter2D(Collider2D col)
+  {
+    if (col.gameObject.tag == "Obstacle")
+    {
+      Destroy(gameObject);
+      FishManager.fish_amount -= 1;
+    }
+
+  }
 }
