@@ -10,7 +10,7 @@ public class FlockManager : MonoBehaviour
   private Vector2 movePosition = new Vector2(0f, 0f);
 
   public Rigidbody2D rb;
-  float speed = 1f;
+  float speed = 2f;
   // Start is called before the first frame update
   void Start()
   {

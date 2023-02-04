@@ -25,7 +25,7 @@ public class ProgressManager : MonoBehaviour
 
     private void Update()
     {
-        if(AliveFish != null)
+        if(AliveFish != null && !GameOverManager.instance.isGameOver)
         {
             CalculateCrossedDistance();
             UpdateProgressPar();
@@ -41,9 +41,9 @@ public class ProgressManager : MonoBehaviour
 
         ProgressImage.fillAmount = Progres;
 
-
         float angle = Mathf.Atan2(AliveFish.transform.position.y - EndPoint.transform.position.y, AliveFish.transform.position.x - EndPoint.transform.position.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle+180));
+        
     }
 
     void CalculateTotalDistance() {
