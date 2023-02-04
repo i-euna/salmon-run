@@ -61,6 +61,11 @@ public class FlockManager : MonoBehaviour
         Die();
       }
     }
+    if (col.gameObject.tag == "Trigger")
+    {
+      NarrationTrigger nt = col.gameObject.GetComponent<NarrationTrigger>();
+      nt.ShowText();
+    }
   }
 
   void Die()

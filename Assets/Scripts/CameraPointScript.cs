@@ -6,7 +6,7 @@ public class CameraPointScript : MonoBehaviour
 {
 
   private Vector2 mousePos;
-  // Start is called before the first frame update
+
   void Update()
   {
     mousePos = getPosition();
@@ -18,4 +18,12 @@ public class CameraPointScript : MonoBehaviour
   {
     return Camera.main.ScreenToWorldPoint(Input.mousePosition);
   }
+
+  // private void OnTriggerEnter(Collider other)
+  // {
+  //   if (other.gameObject.tag == "Trigger")
+  //   {
+
+  //   }
+  // }
 }
