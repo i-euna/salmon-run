@@ -43,8 +43,13 @@ public class FlockManager : MonoBehaviour
   {
     if (col.gameObject.tag == "Obstacle")
     {
-      Destroy(gameObject);
-      FishManager.fish_amount -= 1;
+      ObstacleScript ob = col.gameObject.GetComponent<ObstacleScript>();
+      if (ob.deadly)
+      {
+        ob.Kill();
+        Destroy(gameObject);
+        FishManager.fish_amount -= 1;
+      }
     }
 
   }
