@@ -5,14 +5,34 @@ using UnityEngine;
 public class ObstacleScript : MonoBehaviour
 {
   public bool deadly = true;
+  public float openTime;
+  public Animator animator;
+  public GameObject player;
+
+  float distance;
 
   public void Kill()
   {
-    Invoke("Stop", 0.5f);
+    animator.SetBool("Attack", true);
+    Invoke("Stop", openTime);
   }
 
   public void Stop()
   {
+    animator.SetBool("Attack", false);
     deadly = false;
+  }
+
+  void FixedUpdate()
+  {
+    distance = Vector2.Distance(transform.position, player.transform.position);
+    if (distance < 3)
+    {
+      animator.SetBool("In Range", true);
+    }
+    else
+    {
+      animator.SetBool("In Range", false);
+    }
   }
 }

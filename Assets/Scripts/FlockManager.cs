@@ -46,6 +46,7 @@ public class FlockManager : MonoBehaviour
       ObstacleScript ob = col.gameObject.GetComponent<ObstacleScript>();
       if (ob.deadly)
       {
+        Debug.Log(FishManager.fish_amount);
         ob.Kill();
         Destroy(gameObject);
         FishManager.fish_amount -= 1;
