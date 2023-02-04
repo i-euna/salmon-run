@@ -14,8 +14,8 @@ public class ObstacleManager : MonoBehaviour
     public int ObstacleType;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("ObstacleType " + ObstacleType);
-        AudioManager.Instance.PlayEffect(ObstacleType);
+        if(AudioManager.Instance != null)
+            AudioManager.Instance.PlayEffect(ObstacleType);
     }
 
 }
