@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5358668472823620271}
   - component: {fileID: 5358668472823620268}
+  - component: {fileID: 917267388663157566}
+  - component: {fileID: 3280257295541874644}
   m_Layer: 0
   m_Name: map_3
   m_TagString: Untagged
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_Sprite: {fileID: 21300000, guid: a5995e54d8cb44533899d8fefdcdb4dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,3 +86,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &917267388663157566
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5358668472823620270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 7.0133038, y: 6.928934}
+  - {x: 1.731447, y: 8.124802}
+  - {x: 1.6429935, y: 7.11637}
+  - {x: 1.6552105, y: 6.11985}
+  - {x: 0.9271867, y: 4.623558}
+  - {x: -0.29470682, y: 3.8854885}
+  - {x: -1.0768032, y: 1.6703281}
+  - {x: -0.72246075, y: -1.0940361}
+  - {x: -0.49947023, y: -2.4143047}
+  - {x: 0.92427516, y: -3.7932549}
+  - {x: 1.394681, y: -4.567235}
+  - {x: 1.4318359, y: -5.8065715}
+  - {x: 1.6332369, y: -7.0420985}
+  - {x: 1.681494, y: -7.9014683}
+  - {x: 7.087946, y: -7.0314207}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &3280257295541874644
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5358668472823620270}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -7.1513357, y: 7.2024183}
+  - {x: -2.1669936, y: 8.105612}
+  - {x: -1.5176244, y: 7.224268}
+  - {x: -1.3593044, y: 5.76589}
+  - {x: -2.7821193, y: 3.80303}
+  - {x: -3.7268271, y: 2.445695}
+  - {x: -4.09717, y: 1.2220144}
+  - {x: -3.813199, y: -0.61070776}
+  - {x: -3.108519, y: -2.3047733}
+  - {x: -2.801313, y: -3.223628}
+  - {x: -1.1821666, y: -4.786599}
+  - {x: -1.0057425, y: -6.404404}
+  - {x: -1.6302681, y: -7.225037}
+  - {x: -2.5119324, y: -8.141938}
+  - {x: -7.1561747, y: -7.0564246}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
