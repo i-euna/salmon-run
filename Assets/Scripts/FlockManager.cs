@@ -7,13 +7,18 @@ public class FlockManager : MonoBehaviour
   private Vector2 mousePos;
   private Vector2 myPosition;
 
+  public Transform flock;
+
   private Vector2 movePosition = new Vector2(0f, 0f);
 
   public Rigidbody2D rb;
   float speed = 2f;
+
+  private float deathDistance;
   // Start is called before the first frame update
   void Start()
   {
+    deathDistance = FishManager.deathDistance;
     //float angle = Random.Range(0, 2 * Mathf.PI);
     //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
   }
@@ -25,13 +30,18 @@ public class FlockManager : MonoBehaviour
     myPosition = transform.position;
     movePosition = Vector2.Lerp(myPosition, mousePos, speed * 0.01f);
     float angle = Mathf.Atan2(myPosition.y - mousePos.y, myPosition.x - mousePos.x) * Mathf.Rad2Deg;
-    // transform.position = Vector2.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
     transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
   }
 
   private void FixedUpdate()
   {
     rb.MovePosition(movePosition);
+    float distance = Vector2.Distance(transform.position, flock.position);
+    if (distance > deathDistance)
+    {
+      Debug.Log(FishManager.fish_amount);
+      Die();
+    }
   }
 
   Vector2 getPosition()
@@ -46,12 +56,16 @@ public class FlockManager : MonoBehaviour
       ObstacleScript ob = col.gameObject.GetComponent<ObstacleScript>();
       if (ob.deadly)
       {
-        Debug.Log(FishManager.fish_amount);
+        // Debug.Log(FishManager.fish_amount);
         ob.Kill();
-        Destroy(gameObject);
-        FishManager.fish_amount -= 1;
+        Die();
       }
     }
+  }
 
+  void Die()
+  {
+    Destroy(gameObject);
+    FishManager.fish_amount -= 1;
   }
 }

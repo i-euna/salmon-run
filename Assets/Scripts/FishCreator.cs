@@ -17,6 +17,7 @@ public class FishCreator : MonoBehaviour
     for (int i = 0; i < fish_amount; i++)
     {
       GameObject newFish = Instantiate(fish, fish.transform.position, fish.transform.rotation);
+      newFish.GetComponent<FlockManager>().flock = gameObject.transform;
       fishes.Add(newFish);
     }
   }
