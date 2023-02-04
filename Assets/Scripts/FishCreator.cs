@@ -22,6 +22,6 @@ public class FishCreator : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-
+        CameraMovement.instance.player = fishes[0].transform;
   }
 }
