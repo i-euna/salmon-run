@@ -23,5 +23,6 @@ public class FishCreator : MonoBehaviour
   void Update()
   {
         CameraMovement.instance.player = fishes[0].transform;
+        ProgressManager.instance.AliveFish = fishes[0].transform;
   }
 }
