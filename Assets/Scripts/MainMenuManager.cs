@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class MainMenuManager : MonoBehaviour
 {
-  // Start is called before the first frame update
-  void Start()
-  {
 
+  public GameObject creditsPanel;
+
+  public void ShowCredits()
+  {
+    creditsPanel.SetActive(true);
   }
 
-  // Update is called once per frame
-  void Update()
+  public void HideCredits()
   {
-
+    creditsPanel.SetActive(false);
   }
 
   public void QuitGame()
