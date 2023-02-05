@@ -20,6 +20,7 @@ public class ObstacleScript : MonoBehaviour
   public void Stop()
   {
     animator.SetBool("Attack", false);
+    animator.SetBool("Stop", true);
     deadly = false;
   }
 
