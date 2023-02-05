@@ -775,8 +775,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1366,8 +1366,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "The Game was Made as a part of global game jam p\xE4rnu\n\nGame Development:
     \nMykhailo Stavrovskyi\nEuna Islam\r\n\nArt & Animation: \nKadir Alp Yalt\u0131\nSarthak
-    Chandra Gautam\n\nLevel Design:\n Ahmed Pasha Faisal\r\n\nAudio & Narrative Design:\n
-    Nail T\xFCrko\u011Flu\n"
+    Chandra Gautam\n\nLevel Design:\n Ahmed Pasha Faisal\r\n\nAudio & Narrative Design:\nNail
+    T\xFCrko\u011Flu\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15d3637fcc46e164c94d70090196e775, type: 2}
   m_sharedMaterial: {fileID: 3772201055792554656, guid: 15d3637fcc46e164c94d70090196e775, type: 2}
