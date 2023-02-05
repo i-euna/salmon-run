@@ -24,4 +24,9 @@ public class NarrationTrigger : MonoBehaviour
     manager.Stop();
   }
 
+  private void OnCollisionEnter2D(Collision2D collision)
+  {
+    AudioManager.Instance.PlayAmbiance();
+  }
+
 }

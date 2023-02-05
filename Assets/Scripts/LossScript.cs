@@ -8,12 +8,6 @@ public class LossScript : MonoBehaviour
   public void Lose()
   {
     gameObject.SetActive(true);
-    Invoke("Pause", 2f);
-  }
-
-  public void Pause()
-  {
-    Time.timeScale = 0f;
   }
 
   public void TryAgain()
