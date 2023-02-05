@@ -1385,7 +1385,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4063964845068263738, guid: 66a98a0232abbff4aabed7b7c4d1b676, type: 3}
       propertyPath: text
-      value: Fishermen catch to feed their family
+      value: Fishermen catch them to feed their family
       objectReference: {fileID: 0}
     - target: {fileID: 4063964845068263738, guid: 66a98a0232abbff4aabed7b7c4d1b676, type: 3}
       propertyPath: manager
@@ -5081,7 +5081,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4063964845068263738, guid: 66a98a0232abbff4aabed7b7c4d1b676, type: 3}
       propertyPath: text
-      value: ' Grizzlies eats to survive'
+      value: ' Grizzlies eat them to survive'
       objectReference: {fileID: 0}
     - target: {fileID: 4063964845068263738, guid: 66a98a0232abbff4aabed7b7c4d1b676, type: 3}
       propertyPath: manager
