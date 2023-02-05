@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 392185073}
+  animator: {fileID: 0}
   isGameOver: 0
 --- !u!61 &308710586
 BoxCollider2D:
@@ -1521,7 +1522,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636491090}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b72e61bb40e7b648a786e0f2e0a324f, type: 3}
   m_Name: 
