@@ -14,7 +14,8 @@ public class ObstacleManager : MonoBehaviour
     public int ObstacleType;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(AudioManager.Instance != null)
+        int index = FishCreator.instance.fishes.IndexOf(collision.gameObject);
+        if (index > 1 && index % 10 == 0 && AudioManager.Instance != null)
             AudioManager.Instance.PlayEffect(ObstacleType);
     }
 

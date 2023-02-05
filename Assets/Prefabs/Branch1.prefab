@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6852494795776537646}
   - component: {fileID: 6852494795776537645}
   - component: {fileID: 6852494795776537644}
+  - component: {fileID: 3513381131556046441}
   m_Layer: 0
   m_Name: Branch1
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &6852494795776537644
@@ -122,3 +123,16 @@ PolygonCollider2D:
       - {x: 0.15098463, y: -0.1464769}
       - {x: 0.16, y: 0.14999999}
       - {x: 0.15601023, y: 0.14347187}
+--- !u!114 &3513381131556046441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852494795776537635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a68fc0bbf65534291518c31f8ac790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObstacleType: 2
