@@ -4,39 +4,42 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance;
+  public static AudioManager Instance;
 
-    public GameObject MusicManager, AmbianceManager;
-    [SerializeField]
-    private AudioSource EffectSource;
-    public AudioClip[] EffectClips;
+  public GameObject MusicManager, AmbianceManager;
+  [SerializeField]
+  private AudioSource EffectSource;
+  public AudioClip[] EffectClips;
 
-    private void Start()
+  private void Start()
+  {
+    if (Instance == null)
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else {
-            Destroy(gameObject);
-        }
-
+      Instance = this;
+      DontDestroyOnLoad(gameObject);
     }
-
-    public void PlayEffect(int Clip) {
-        EffectSource.PlayOneShot(EffectClips[Clip]);
-    }
-
-
-    public void PlayBackgroundMusic()
+    else
     {
-        MusicManager.SetActive(true);
+      Destroy(gameObject);
     }
+    PlayBackgroundMusic();
 
-    public void PlayAmbiance()
-    {
-        AmbianceManager.SetActive(true);
-    }
+  }
+
+  public void PlayEffect(int Clip)
+  {
+    EffectSource.PlayOneShot(EffectClips[Clip]);
+  }
+
+
+  public void PlayBackgroundMusic()
+  {
+    MusicManager.SetActive(true);
+  }
+
+  public void PlayAmbiance()
+  {
+    AmbianceManager.SetActive(true);
+  }
 
 }
