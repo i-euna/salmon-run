@@ -26,7 +26,7 @@ public class ObstacleScript : MonoBehaviour
   void FixedUpdate()
   {
     distance = Vector2.Distance(transform.position, player.transform.position);
-    if (distance < 3)
+    if (distance < 4)
     {
       animator.SetBool("In Range", true);
     }
