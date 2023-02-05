@@ -6,6 +6,6 @@ public static class FishManager
 {
   public static int fish_amount;
 
-  public static float deathDistance = 500f;
+  public static float deathDistance = 8f;
 
 }
