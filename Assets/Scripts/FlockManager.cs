@@ -70,7 +70,11 @@ public class FlockManager : MonoBehaviour
 
   void Die()
   {
-    Destroy(gameObject);
-    FishManager.fish_amount -= 1;
+
+        int index = FishCreator.instance.fishes.IndexOf(gameObject);
+        if (index != -1)
+            FishCreator.instance.fishes.Remove(FishCreator.instance.fishes[index]);
+        Destroy(gameObject);
+        FishManager.fish_amount -= 1;
   }
 }
