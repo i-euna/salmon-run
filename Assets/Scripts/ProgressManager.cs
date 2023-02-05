@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ProgressManager : MonoBehaviour
 {
@@ -15,21 +16,34 @@ public class ProgressManager : MonoBehaviour
     float TotalDistance = 0.0f;
     float CrossedDistance = 0.0f;
 
+    public TMP_Text percentage;
+
 
     private void Start()
     {
         instance = this;
         ProgressImage = GetComponent<Image>();
-        CalculateTotalDistance();
+        
     }
 
     private void Update()
     {
-        if(AliveFish != null && !GameOverManager.instance.isGameOver)
+        CalculateTotalDistance();
+        if (AliveFish != null && !GameOverManager.instance.isGameOver)
         {
             CalculateCrossedDistance();
-            UpdateProgressPar();
+            //UpdateProgressPar();
         }
+        float Progres = 0.0f;
+        if (TotalDistance >= CrossedDistance)
+            Progres = (CrossedDistance / TotalDistance)*100;
+        else Progres = 0;
+        Debug.Log("TotalDistance: " + TotalDistance);
+        Debug.Log("CrossedDistance: " + CrossedDistance);
+        int dist = 100-(int)Progres;
+        percentage.text = dist.ToString() + "m"; 
+
+        
     }
 
     void UpdateProgressPar() {
@@ -54,4 +68,6 @@ public class ProgressManager : MonoBehaviour
     {
         CrossedDistance = Vector3.Distance(StartPoint.transform.position, AliveFish.transform.position);
     }
+
+    
 }
