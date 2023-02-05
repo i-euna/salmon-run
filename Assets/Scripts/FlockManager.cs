@@ -28,7 +28,7 @@ public class FlockManager : MonoBehaviour
   {
     mousePos = getPosition();
     myPosition = transform.position;
-    movePosition = Vector2.Lerp(myPosition, mousePos, speed * 0.01f);
+    movePosition = Vector2.Lerp(myPosition, mousePos, speed * 0.007f);
     float angle = Mathf.Atan2(myPosition.y - mousePos.y, myPosition.x - mousePos.x) * Mathf.Rad2Deg;
     transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
   }
@@ -71,10 +71,10 @@ public class FlockManager : MonoBehaviour
   void Die()
   {
 
-        int index = FishCreator.instance.fishes.IndexOf(gameObject);
-        if (index != -1)
-            FishCreator.instance.fishes.Remove(FishCreator.instance.fishes[index]);
-        Destroy(gameObject);
-        FishManager.fish_amount -= 1;
+    int index = FishCreator.instance.fishes.IndexOf(gameObject);
+    if (index != -1)
+      FishCreator.instance.fishes.Remove(FishCreator.instance.fishes[index]);
+    Destroy(gameObject);
+    FishManager.fish_amount -= 1;
   }
 }

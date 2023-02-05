@@ -12,9 +12,13 @@ public class LossScript : MonoBehaviour
 
   public void TryAgain()
   {
-    Debug.Log("HEEEY");
     Time.timeScale = 1f;
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     gameObject.SetActive(false);
+  }
+
+  public void BackToMenu()
+  {
+    SceneManager.LoadScene("LoadingScene");
   }
 }
