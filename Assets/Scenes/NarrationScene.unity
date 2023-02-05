@@ -252,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308710583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.76, y: 59.77, z: 0.0024912676}
+  m_LocalPosition: {x: -0.5, y: 11.1, z: 0.0024912676}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -274,7 +274,7 @@ MonoBehaviour:
   GameOverPanel: {fileID: 392185073}
   animator: {fileID: 392185077}
   isGameOver: 0
-  signText: {fileID: 0}
+  signText: {fileID: 1821289881}
 --- !u!61 &308710586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -923,6 +923,17 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &1821289881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6857613676667522066, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+  m_PrefabInstance: {fileID: 8729239140331829605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2029492874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2013,5 +2024,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 16777215
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8183566772714768674, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
