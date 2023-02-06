@@ -2,8 +2,8 @@
 Made at Global Game Jam, Pärnu
 
 
-Credits: 
-Game Development: Mykhailo Stavrovskyi, Euna Islam
-Art & Animation: Kadir Alp Yaltı, Sarthak Chandra Gautam
-Audio & Narrative Design: Nail Türkoğlu
-Idea & Game Design: Ahmed Pasha Faisal
+Credits: <br>
+Game Development: Mykhailo Stavrovskyi, Euna Islam<br>
+Art & Animation: Kadir Alp Yaltı, Sarthak Chandra Gautam<br>
+Audio & Narrative Design: Nail Türkoğlu<br>
+Idea & Game Design: Ahmed Pasha Faisal<br>
