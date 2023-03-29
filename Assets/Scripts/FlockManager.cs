@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlockManager : MonoBehaviour
@@ -19,8 +17,6 @@ public class FlockManager : MonoBehaviour
   void Start()
   {
     deathDistance = FishManager.deathDistance;
-    //float angle = Random.Range(0, 2 * Mathf.PI);
-    //transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
   }
 
   // Update is called once per frame
@@ -56,7 +52,6 @@ public class FlockManager : MonoBehaviour
       ObstacleScript ob = col.gameObject.GetComponent<ObstacleScript>();
       if (ob.deadly)
       {
-        // Debug.Log(FishManager.fish_amount);
         ob.Kill();
         Die();
       }
@@ -70,7 +65,6 @@ public class FlockManager : MonoBehaviour
 
   void Die()
   {
-
     int index = FishCreator.instance.fishes.IndexOf(gameObject);
     if (index != -1)
       FishCreator.instance.fishes.Remove(FishCreator.instance.fishes[index]);

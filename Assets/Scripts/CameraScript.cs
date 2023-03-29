@@ -23,7 +23,6 @@ public class CameraScript : MonoBehaviour
 
   private void FixedUpdate()
   {
-
     Vector3 targetPosition = player.position;
     Vector3 bounds = new Vector3(
         Mathf.Clamp(targetPosition.x, minV.x, maxV.x),

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraPointScript : MonoBehaviour
@@ -18,12 +16,4 @@ public class CameraPointScript : MonoBehaviour
   {
     return Camera.main.ScreenToWorldPoint(Input.mousePosition);
   }
-
-  // private void OnTriggerEnter(Collider other)
-  // {
-  //   if (other.gameObject.tag == "Trigger")
-  //   {
-
-  //   }
-  // }
 }
