@@ -14,9 +14,6 @@ public class FlockController : MonoBehaviour
     //Fish Pool
     private ObjectPool<GameObject> FishPool;
 
-    [Tooltip("Initial Position For Initializing The Flock")]
-    [SerializeField]
-    private Transform InitialPosition;
     [Tooltip("Max Width For Initializing The Flock")]
     [SerializeField]
     private FloatVariable MaxWidth;
@@ -43,13 +40,14 @@ public class FlockController : MonoBehaviour
         );
     }
 
-    void ActivateAll() { 
+    void ActivateAll() {
+
         int max = MaxNoOfFish.Value;
         while (max > 0) {
             GameObject fish = FishPool.Get();
             fish.SetActive(true);
             Vector3 randomOffset = new Vector3(Random.Range(-MaxWidth.Value, MaxWidth.Value), Random.Range(-MaxHeight.Value, MaxHeight.Value), 0f);
-            Vector3 spawnPosition = InitialPosition.position + randomOffset;
+            Vector3 spawnPosition = fish.transform.position + randomOffset;
             fish.transform.position = spawnPosition;
             max--;
         }
