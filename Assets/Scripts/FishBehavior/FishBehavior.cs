@@ -16,6 +16,18 @@ public class FishBehavior : MonoBehaviour
     [SerializeField]
     private GameEvent GameOverEvent;
 
+    [Tooltip("Hit stone event")]
+    [SerializeField]
+    private GameEvent HitStoneEvent;
+
+    [Tooltip("Hit bear event")]
+    [SerializeField]
+    private GameEvent HitBearEvent;
+
+    [Tooltip("Hit fisherman event")]
+    [SerializeField]
+    private GameEvent HitFishermanEvent;
+
     private void Start()
     {
         zPos = transform.position.z;
@@ -38,15 +50,29 @@ public class FishBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Obstacle") {
-            //Release to pool
-            controller.ReleaseFish(gameObject);
-        }
-
-        if (collision.collider.tag == "EndPoint")
-        {
-            //Game Over
-            GameOverEvent.Raise();
+        switch (collision.collider.tag) {
+            case "EndPoint":
+                //Game Over
+                GameOverEvent.Raise();
+                break;
+            case "Stone":
+                //Release to pool
+                HitStoneEvent.Raise();
+                controller.ReleaseFish(gameObject);
+                break;
+            case "Fisherman":
+                Debug.Log("Hit fisherman");
+                //Release to pool
+                HitFishermanEvent.Raise();
+                controller.ReleaseFish(gameObject);
+                break;
+            case "Bear":
+                Debug.Log("Hit bear");
+                HitBearEvent.Raise();
+                controller.ReleaseFish(gameObject);
+                break;
+            default:
+                break;
         }
     }
 

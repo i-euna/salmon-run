@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -752,7 +752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1085,7 +1085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -1222,7 +1222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -1295,7 +1295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -1377,7 +1377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -1452,6 +1452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1171772468}
     m_Modifications:
+    - target: {fileID: 2996621742974064390, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4320294827586798067, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: player
       value: 
@@ -1459,6 +1463,10 @@ PrefabInstance:
     - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_Name
       value: fisherman-idle_0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_TagString
+      value: Fisherman
       objectReference: {fileID: 0}
     - target: {fileID: 9170127676330414691, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_RootOrder
@@ -1667,7 +1675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380538, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_SortingOrder
@@ -1744,7 +1752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -1905,7 +1913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -2080,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -2203,9 +2211,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 32.18
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -2532,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -2896,7 +2912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -3406,7 +3422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -3567,7 +3583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3702,7 +3718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -4072,9 +4088,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -4307,7 +4331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4330,6 +4354,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1171772468}
     m_Modifications:
+    - target: {fileID: 2996621742974064390, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4320294827586798067, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: player
       value: 
@@ -4337,6 +4365,10 @@ PrefabInstance:
     - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_Name
       value: fisherman-idle_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_TagString
+      value: Fisherman
       objectReference: {fileID: 0}
     - target: {fileID: 9170127676330414691, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_RootOrder
@@ -4464,9 +4496,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -5020,7 +5060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -5206,7 +5246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -5331,7 +5371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5387,7 +5427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -5544,7 +5584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5884,9 +5924,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -5940,6 +5988,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1171772468}
     m_Modifications:
+    - target: {fileID: 2996621742974064390, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4320294827586798067, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: player
       value: 
@@ -5947,6 +5999,10 @@ PrefabInstance:
     - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_Name
       value: fisherman-idle_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914405853629264562, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
+      propertyPath: m_TagString
+      value: Fisherman
       objectReference: {fileID: 0}
     - target: {fileID: 9170127676330414691, guid: be8314a97777f4ce48cdc8d81fbe059a, type: 3}
       propertyPath: m_RootOrder
@@ -6131,7 +6187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -6382,7 +6438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -6550,7 +6606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -6723,7 +6779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -6855,8 +6911,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.33036548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0074133947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
+      value: Bear
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
       value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -6967,9 +7043,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -7228,7 +7312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -7541,9 +7625,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170190, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
       propertyPath: m_Name
       value: Bear (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053091940015170191, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
+      propertyPath: m_TagString
+      value: Bear
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4053091940015170177, guid: 2298f08cb5f6d08449bccf70886da9cb, type: 3}
@@ -7571,7 +7663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -8095,6 +8187,9 @@ MonoBehaviour:
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
   GameOverEvent: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
+  HitStoneEvent: {fileID: 11400000, guid: 833b67f77e46107479cb4786926fdaff, type: 2}
+  HitBearEvent: {fileID: 11400000, guid: 400b92577b0d22e468a396b665a282bf, type: 2}
+  HitFishermanEvent: {fileID: 11400000, guid: 9fcabb1e66ab00a42b9b16ed7d58ccb3, type: 2}
 --- !u!1 &2049343047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
@@ -8282,7 +8377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380539, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_RootOrder
@@ -8350,7 +8445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -8656,7 +8751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 1468643669832072270, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
       propertyPath: m_RootOrder
@@ -8797,7 +8892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 3577886126566523578, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
       propertyPath: m_Size.x
@@ -9005,7 +9100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380516, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 6304545728111380536, guid: f5401485b7572164ab4d7e7f11f83d57, type: 3}
       propertyPath: m_Size.x

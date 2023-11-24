@@ -7,6 +7,9 @@ TagManager:
   - Obstacle
   - Trigger
   - EndPoint
+  - Bear
+  - Fisherman
+  - Stone
   layers:
   - Default
   - TransparentFX
