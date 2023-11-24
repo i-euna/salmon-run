@@ -30,7 +30,11 @@ public class FlockController : MonoBehaviour
     void InitializeFishPool() {
         //Initialize the pool
         FishPool = new ObjectPool<GameObject>(() =>
-        { return Instantiate(FishPrefab); },
+        {
+            GameObject newFish = Instantiate(FishPrefab);
+            newFish.transform.parent = transform;
+            return newFish; 
+        },
         fish => { fish.SetActive(true); },
         fish => { fish.SetActive(false); },
         fish => { Destroy(fish); },
@@ -51,5 +55,10 @@ public class FlockController : MonoBehaviour
             fish.transform.position = spawnPosition;
             max--;
         }
+    }
+
+    public void ReleaseFish(GameObject fish)
+    {
+        FishPool.Release(fish);
     }
 }
