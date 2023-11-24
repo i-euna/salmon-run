@@ -1983,6 +1983,7 @@ MonoBehaviour:
   LastMousePosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
   MouseMoveEvent: {fileID: 11400000, guid: 9c79ae4099b4c5c43941d6ec14386bdd, type: 2}
   MainCamera: {fileID: 1813688622}
+  GameState: {fileID: 11400000, guid: 71cda207be0a7574987607b2c28e5840, type: 2}
 --- !u!1001 &458662408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3179,6 +3180,7 @@ Transform:
   - {fileID: 453972301}
   - {fileID: 2059954181}
   - {fileID: 859867462}
+  - {fileID: 1058091734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789448612
@@ -4091,6 +4093,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5752767376178535291, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
   m_PrefabInstance: {fileID: 5752767375185115256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1058091733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058091734}
+  - component: {fileID: 1058091736}
+  - component: {fileID: 1058091735}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058091734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058091733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 786104647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058091735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058091733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1058091736}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1058091736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058091733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a01ca92dc62c5438e880a9b62b48d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameState: {fileID: 11400000, guid: 71cda207be0a7574987607b2c28e5840, type: 2}
 --- !u!1001 &1071037947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8845,6 +8921,14 @@ PrefabInstance:
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 1474827025}
+    - target: {fileID: 5752767375484908738, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.047614187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752767375484908738, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.4761929
+      objectReference: {fileID: 0}
     - target: {fileID: 5752767375484908751, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
       propertyPath: m_TagString
       value: EndPoint
