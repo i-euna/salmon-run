@@ -13,8 +13,11 @@ public class FlockPosition : MonoBehaviour
     [SerializeField]
     private float xClampValue;
 
+    private Vector3 InitialPos;
+
     private void Start()
     {
+        InitialPos = transform.position;
         zPos = transform.position.z;
     }
 
@@ -26,5 +29,10 @@ public class FlockPosition : MonoBehaviour
                                             zPos);
         //move towards target
         transform.position = Vector3.Lerp(transform.position, targetPosition, MovementSpeed.Value * Time.deltaTime);
+    }
+
+    public void Reset()
+    {
+        transform.position = InitialPos;
     }
 }

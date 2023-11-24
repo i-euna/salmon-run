@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameState : ScriptableObject
 {
     public enum State { 
-        GAMEOVER, GAME_RUNNING, GAME_LOADING
+        GAMEOVER, GAME_LOST, GAME_RUNNING, GAME_LOADING
     }
 
     public State CurrentState;

@@ -19,4 +19,9 @@ public class GameManager : MonoBehaviour
     public void GameOver() {
         GameState.CurrentState = GameState.State.GAMEOVER;
     }
+
+    public void GameLost()
+    {
+        GameState.CurrentState = GameState.State.GAME_LOST;
+    }
 }

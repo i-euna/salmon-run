@@ -3385,6 +3385,7 @@ GameObject:
   - component: {fileID: 822057664}
   - component: {fileID: 7553416674358838679}
   - component: {fileID: 7553416674358838680}
+  - component: {fileID: 7553416674358838681}
   m_Layer: 0
   m_Name: FlockPos
   m_TagString: Untagged
@@ -3641,6 +3642,8 @@ GameObject:
   - component: {fileID: 859867462}
   - component: {fileID: 859867463}
   - component: {fileID: 859867464}
+  - component: {fileID: 859867465}
+  - component: {fileID: 859867466}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -3676,6 +3679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1474827025}
+  GameLostPanel: {fileID: 1574959693}
 --- !u!114 &859867464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3695,6 +3699,62 @@ MonoBehaviour:
       - m_Target: {fileID: 859867463}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ActivateGameOverPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &859867465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859867461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ea3559a8e2ec6a94c9b98ddc6daaee19, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859867463}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: ActivateGameLostPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &859867466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859867461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c84e904b5e852041a8066850114a09a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859867463}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: DeactivateGameLostPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4128,6 +4188,8 @@ GameObject:
   - component: {fileID: 1058091734}
   - component: {fileID: 1058091736}
   - component: {fileID: 1058091735}
+  - component: {fileID: 1058091737}
+  - component: {fileID: 1058091738}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4191,6 +4253,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameState: {fileID: 11400000, guid: 71cda207be0a7574987607b2c28e5840, type: 2}
+--- !u!114 &1058091737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058091733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ea3559a8e2ec6a94c9b98ddc6daaee19, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1058091736}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GameLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1058091738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058091733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c84e904b5e852041a8066850114a09a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1058091736}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1071037947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5413,6 +5531,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1319851200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8729239140847877414, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+  m_PrefabInstance: {fileID: 1474827024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1319851205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319851200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b439f1b2956f2674ea0c45417c3ea2ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameResetEvent: {fileID: 11400000, guid: 4c84e904b5e852041a8066850114a09a, type: 2}
 --- !u!1001 &1323768294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5821,6 +5957,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8729239140847877408, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729239140847877414, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+      propertyPath: m_Name
+      value: TryAgainButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729239141762526215, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8183566772714768674, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
     m_RemovedGameObjects: []
@@ -5828,7 +5976,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8729239139766524749, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
       insertIndex: -1
       addedObject: {fileID: 482177443}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8729239140847877414, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319851205}
   m_SourcePrefab: {fileID: 100100000, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
 --- !u!1 &1474827025 stripped
 GameObject:
@@ -6140,6 +6291,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8364246617274692586, guid: e3183a169a19a4564b2b0826a882d8a1, type: 3}
   m_PrefabInstance: {fileID: 1537050073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1574959693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8729239141762526215, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+  m_PrefabInstance: {fileID: 1474827024}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576842252 stripped
 GameObject:
@@ -8265,6 +8421,7 @@ GameObject:
   - component: {fileID: 2059954181}
   - component: {fileID: 2059954182}
   - component: {fileID: 2059954183}
+  - component: {fileID: 2059954184}
   m_Layer: 0
   m_Name: FlockManager
   m_TagString: Untagged
@@ -8303,6 +8460,7 @@ MonoBehaviour:
   MaxNoOfFish: {fileID: 11400000, guid: 4512f80b363cedd4b94ed814d57781f5, type: 2}
   MaxWidth: {fileID: 11400000, guid: 436f2ad6b171af242a62d8f46a39ffdb, type: 2}
   MaxHeight: {fileID: 11400000, guid: 055b2f6d624cc324680b59b2ed6a7f5f, type: 2}
+  GameLoseEvent: {fileID: 11400000, guid: ea3559a8e2ec6a94c9b98ddc6daaee19, type: 2}
 --- !u!114 &2059954183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8322,6 +8480,34 @@ MonoBehaviour:
       - m_Target: {fileID: 2059954182}
         m_TargetAssemblyTypeName: FlockController, Assembly-CSharp
         m_MethodName: ReleaseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2059954184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059954180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c84e904b5e852041a8066850114a09a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059954182}
+        m_TargetAssemblyTypeName: FlockController, Assembly-CSharp
+        m_MethodName: ActivateAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9213,6 +9399,34 @@ MonoBehaviour:
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
   xClampValue: 4
+--- !u!114 &7553416674358838681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822057662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c84e904b5e852041a8066850114a09a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7553416674358838680}
+        m_TargetAssemblyTypeName: FlockPosition, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &7911071992521303687
 PrefabInstance:
   m_ObjectHideFlags: 0

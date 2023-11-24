@@ -21,6 +21,10 @@ public class FlockController : MonoBehaviour
     [SerializeField]
     private FloatVariable MaxHeight;
 
+    [Tooltip("Game lose event")]
+    [SerializeField]
+    private GameEvent GameLoseEvent;
+
     private void Start()
     {
         InitializeFishPool();
@@ -44,14 +48,14 @@ public class FlockController : MonoBehaviour
         );
     }
 
-    void ActivateAll() {
+    public void ActivateAll() {
 
         int max = MaxNoOfFish.Value;
         while (max > 0) {
             GameObject fish = FishPool.Get();
             fish.SetActive(true);
             Vector3 randomOffset = new Vector3(Random.Range(-MaxWidth.Value, MaxWidth.Value), Random.Range(-MaxHeight.Value, MaxHeight.Value), 0f);
-            Vector3 spawnPosition = fish.transform.position + randomOffset;
+            Vector3 spawnPosition = FishPrefab.transform.position + randomOffset;
             fish.transform.position = spawnPosition;
             max--;
         }
@@ -60,6 +64,9 @@ public class FlockController : MonoBehaviour
     public void ReleaseFish(GameObject fish)
     {
         FishPool.Release(fish);
+        if (FishPool.CountActive == 0) {
+            GameLoseEvent.Raise();
+        }
     }
 
     public void ReleaseAll() {
