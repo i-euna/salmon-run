@@ -1725,6 +1725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LastMousePosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
   MouseMoveEvent: {fileID: 11400000, guid: 9c79ae4099b4c5c43941d6ec14386bdd, type: 2}
+  MainCamera: {fileID: 1813688622}
 --- !u!1001 &458662408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6522,7 +6523,19 @@ MonoBehaviour:
   Event: {fileID: 11400000, guid: 9c79ae4099b4c5c43941d6ec14386bdd, type: 2}
   Response:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2029492882}
+        m_TargetAssemblyTypeName: FishBehavior, Assembly-CSharp
+        m_MethodName: MoveTowardsTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2029492882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6530,7 +6543,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029492875}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb06208f09ab20c4a8bde6bc9c0401ee, type: 3}
   m_Name: 
@@ -6583,7 +6596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FishPrefab: {fileID: 2029492875}
   MaxNoOfFish: {fileID: 11400000, guid: 4512f80b363cedd4b94ed814d57781f5, type: 2}
-  InitialPosition: {fileID: 822057664}
   MaxWidth: {fileID: 11400000, guid: 436f2ad6b171af242a62d8f46a39ffdb, type: 2}
   MaxHeight: {fileID: 11400000, guid: 055b2f6d624cc324680b59b2ed6a7f5f, type: 2}
 --- !u!1001 &2067079818

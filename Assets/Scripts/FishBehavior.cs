@@ -8,14 +8,18 @@ public class FishBehavior : MonoBehaviour
     [SerializeField]
     private Vector3Variable TargetPosition;
 
-    void Update()
+    private float zPos;
+
+    private void Start()
     {
-        MoveTowardsTarget();
+        zPos = transform.position.z;
     }
 
-    void MoveTowardsTarget()
+    public void MoveTowardsTarget()
     {
-
-       // transform.position = Vector3.Lerp(transform.position, TargetPosition.Value, MovementSpeed.Value * Time.deltaTime);
+        Vector3 targetPosition = new Vector3(TargetPosition.Value.x, 
+                                            TargetPosition.Value.y,
+                                            zPos);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, MovementSpeed.Value * Time.deltaTime);
     }
 }
