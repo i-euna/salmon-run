@@ -6526,7 +6526,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2029492882}
         m_TargetAssemblyTypeName: FishBehavior, Assembly-CSharp
-        m_MethodName: MoveTowardsTarget
+        m_MethodName: MoveAndRotateTowardsTarget
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
