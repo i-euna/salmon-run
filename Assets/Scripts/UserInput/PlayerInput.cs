@@ -17,8 +17,6 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private GameState GameState;
 
-    //Do not execute methods in Update on every frame
-    private int interval = 2;
     void Start()
     {
         LastMousePosition.Value = Vector3.zero;
@@ -26,7 +24,6 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        //if (Time.frameCount % interval == 0) 
         if(GameState.CurrentState == GameState.State.GAME_RUNNING)
         {
             CheckMouseMovement();

@@ -10,6 +10,9 @@ public class FlockPosition : MonoBehaviour
 
     private float zPos;
 
+    [SerializeField]
+    private float xClampValue;
+
     private void Start()
     {
         zPos = transform.position.z;
@@ -17,7 +20,8 @@ public class FlockPosition : MonoBehaviour
 
     public void MoveTowardsTarget()
     {
-        Vector3 targetPosition = new Vector3(TargetPosition.Value.x,
+        float xPos = Mathf.Clamp(TargetPosition.Value.x, -xClampValue, xClampValue);
+        Vector3 targetPosition = new Vector3(xPos,
                                             TargetPosition.Value.y,
                                             zPos);
         //move towards target

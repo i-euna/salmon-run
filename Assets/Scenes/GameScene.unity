@@ -9117,6 +9117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
+  xClampValue: 4
 --- !u!1001 &7911071992521303687
 PrefabInstance:
   m_ObjectHideFlags: 0
