@@ -61,4 +61,9 @@ public class FlockController : MonoBehaviour
     {
         FishPool.Release(fish);
     }
+
+    public void ReleaseAll() {
+
+        FishPool.Clear();
+    }
 }

@@ -12,6 +12,10 @@ public class FishBehavior : MonoBehaviour
 
     private FlockController controller;
 
+    [Tooltip("Game over event")]
+    [SerializeField]
+    private GameEvent GameOverEvent;
+
     private void Start()
     {
         zPos = transform.position.z;
@@ -35,8 +39,15 @@ public class FishBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Obstacle") {
-            Debug.Log("Die");
+            //Release to pool
             controller.ReleaseFish(gameObject);
         }
+
+        if (collision.collider.tag == "EndPoint")
+        {
+            //Game Over
+            GameOverEvent.Raise();
+        }
     }
+
 }

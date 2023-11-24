@@ -3178,6 +3178,7 @@ Transform:
   m_Children:
   - {fileID: 453972301}
   - {fileID: 2059954181}
+  - {fileID: 859867462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &789448612
@@ -3611,6 +3612,80 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
   m_PrefabInstance: {fileID: 1304189550}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &859867461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 859867462}
+  - component: {fileID: 859867463}
+  - component: {fileID: 859867464}
+  m_Layer: 0
+  m_Name: UIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &859867462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859867461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 786104647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859867463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859867461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfce6647e5b66324983fa4356a6d0a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverPanel: {fileID: 1474827025}
+--- !u!114 &859867464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859867461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 859867463}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: ActivateGameOverPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &869521900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5626,6 +5701,10 @@ PrefabInstance:
       propertyPath: StartPoint
       value: 
       objectReference: {fileID: 1111548186}
+    - target: {fileID: 8729239140510104980, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8183566772714768674, guid: 63c5bc46f74f495489449d228b5e6d26, type: 3}
     m_RemovedGameObjects: []
@@ -7939,6 +8018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
+  GameOverEvent: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
 --- !u!1 &2049343047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
@@ -8013,6 +8093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059954181}
   - component: {fileID: 2059954182}
+  - component: {fileID: 2059954183}
   m_Layer: 0
   m_Name: FlockManager
   m_TagString: Untagged
@@ -8051,6 +8132,34 @@ MonoBehaviour:
   MaxNoOfFish: {fileID: 11400000, guid: 4512f80b363cedd4b94ed814d57781f5, type: 2}
   MaxWidth: {fileID: 11400000, guid: 436f2ad6b171af242a62d8f46a39ffdb, type: 2}
   MaxHeight: {fileID: 11400000, guid: 055b2f6d624cc324680b59b2ed6a7f5f, type: 2}
+--- !u!114 &2059954183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059954180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059954182}
+        m_TargetAssemblyTypeName: FlockController, Assembly-CSharp
+        m_MethodName: ReleaseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2064743765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3577886126566523577, guid: c07d6f27c63d09941945b37a73ac8fb6, type: 3}
@@ -8736,9 +8845,13 @@ PrefabInstance:
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 1474827025}
+    - target: {fileID: 5752767375484908751, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
+      propertyPath: m_TagString
+      value: EndPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 5752767376178535290, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
       propertyPath: m_Name
-      value: map_8
+      value: EndPoint
       objectReference: {fileID: 0}
     - target: {fileID: 5752767376178535291, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
       propertyPath: m_RootOrder
@@ -8788,7 +8901,8 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0.4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5752767375484908737, guid: 4c7f692466b2cdd42910797cd9464f9e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
