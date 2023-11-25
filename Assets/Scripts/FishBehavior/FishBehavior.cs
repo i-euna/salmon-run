@@ -31,6 +31,14 @@ public class FishBehavior : MonoBehaviour
     [SerializeField]
     private GameEventWithArg OnObstacleHit;
 
+    struct ObstacleNames
+    {
+        public const string STONE = "Stone";
+        public const string BEAR = "Bear";
+        public const string FISHERMAN = "Fisherman";
+        public const string ENDPOINT = "EndPoint";
+    }
+
     private void Start()
     {
         zPos = transform.position.z;
@@ -54,22 +62,20 @@ public class FishBehavior : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.collider.tag) {
-            case "EndPoint":
+            case ObstacleNames.ENDPOINT:
                 //Game Over
                 GameOverEvent.Raise();
                 break;
-            case "Stone":
-                OnObstacleHit.InvokeEvent(gameObject);
+            case ObstacleNames.STONE:
+                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.STONE);
                 HitStoneEvent.Raise();
                 break;
-            case "Fisherman":
-                Debug.Log("Hit fisherman");
-                OnObstacleHit.InvokeEvent(gameObject);
-                //Release to pool
+            case ObstacleNames.FISHERMAN:
+                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.FISHERMAN);
                 HitFishermanEvent.Raise();
                 break;
-            case "Bear":
-                OnObstacleHit.InvokeEvent(gameObject);
+            case ObstacleNames.BEAR:
+                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.BEAR);
                 Debug.Log("Hit bear");
                 HitBearEvent.Raise();
                 break;
@@ -79,3 +85,5 @@ public class FishBehavior : MonoBehaviour
     }
 
 }
+
+

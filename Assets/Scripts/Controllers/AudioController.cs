@@ -22,10 +22,19 @@ public class AudioController : Singleton
     [SerializeField]
     private AudioSource Human;
 
+    [Tooltip("Event for obstacle hit")]
+    [SerializeField]
+    private GameEventWithArg OnObstacleHit;
+
     private void Start()
     {
         PlayBackgroundMusic();
         PlayAmbientSound();
+        AddActionListenerForEvents();
+    }
+
+    private void AddActionListenerForEvents() {
+        OnObstacleHit.Event.AddListener(PlayObstacleSound);
     }
 
     /// <summary>
@@ -44,6 +53,10 @@ public class AudioController : Singleton
     {
         Ambient.loop = true;
         Ambient.Play();
+    }
+
+    public void PlayObstacleSound(GameObject _fish, string obstacle) {
+        Stone.Play();
     }
 
     /// <summary>

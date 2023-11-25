@@ -4,10 +4,10 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Custom/GameEventWithArg")]
 public class GameEventWithArg : ScriptableObject
 {
-    public UnityEvent<GameObject> Event;
+    public UnityEvent<GameObject, string> Event;
 
-    public void InvokeEvent(GameObject gO)
+    public void InvokeEvent(GameObject gO, string str)
     {
-        Event.Invoke(gO);
+        Event.Invoke(gO, str);
     }
 }

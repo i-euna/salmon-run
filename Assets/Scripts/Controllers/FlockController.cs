@@ -32,8 +32,7 @@ public class FlockController : MonoBehaviour
     {
         InitializeFishPool();
         ActivateAll();
-
-        OnObstacleHit.Event.AddListener(ReleaseFish);
+        AddActionListerForEvents();
     }
 
     void InitializeFishPool() {
@@ -52,6 +51,9 @@ public class FlockController : MonoBehaviour
         MaxNoOfFish.Value
         );
     }
+    void AddActionListerForEvents() {
+        OnObstacleHit.Event.AddListener(ReleaseFish);
+    }
 
     public void ActivateAll() {
 
@@ -66,7 +68,7 @@ public class FlockController : MonoBehaviour
         }
     }
 
-    public void ReleaseFish(GameObject fish)
+    public void ReleaseFish(GameObject fish, string _obstacle)
     {
         FishPool.Release(fish);
         //check remaining amount
