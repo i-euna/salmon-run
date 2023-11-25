@@ -1,9 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game State")]
+    [Tooltip("Current Game State")]
     [SerializeField]
     private GameState GameState;
 
@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     {
         StartGame();
     }
+
     public void StartGame()
     {
         GameState.CurrentState = GameState.State.GAME_RUNNING;
