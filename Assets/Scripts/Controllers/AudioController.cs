@@ -55,31 +55,25 @@ public class AudioController : Singleton
         Ambient.Play();
     }
 
+    /// <summary>
+    /// Play obstacle sounds
+    /// </summary>
+    /// <param name="_fish">fish game object</param>
+    /// <param name="obstacle">obstacle type</param>
     public void PlayObstacleSound(GameObject _fish, string obstacle) {
-        Stone.Play();
-    }
-
-    /// <summary>
-    /// Play stone sound
-    /// </summary>
-    public void PlayStoneSound()
-    {
-        Stone.Play();
-    }
-
-    /// <summary>
-    /// Play bear sound
-    /// </summary>
-    public void PlayBearSound()
-    {
-        Bear.Play();
-    }
-
-    /// <summary>
-    /// Play human sound
-    /// </summary>
-    public void PlayHumanSound()
-    {
-        Human.Play();
+        switch (obstacle)
+        {
+            case ObstacleNames.STONE:
+                Stone.Play();
+                break;
+            case ObstacleNames.FISHERMAN:
+                Human.Play();
+                break;
+            case ObstacleNames.BEAR:
+                Bear.Play();
+                break;
+            default:
+                break;
+        }
     }
 }
