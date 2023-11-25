@@ -3,6 +3,7 @@ using UnityEngine.Pool;
 
 public class FlockController : MonoBehaviour
 {
+    [Header("Fish Flock Creation Variables")]
     [Tooltip("Fish Prefab")]
     [SerializeField]
     private GameObject FishPrefab;
@@ -11,22 +12,25 @@ public class FlockController : MonoBehaviour
     [SerializeField]
     private IntVariable MaxNoOfFish;
 
-    //Fish Pool
-    private ObjectPool<GameObject> FishPool;
-
     [Tooltip("Max Width For Initializing The Flock")]
     [SerializeField]
     private FloatVariable MaxWidth;
+
     [Tooltip("Max Height For Initializing The Flock")]
     [SerializeField]
     private FloatVariable MaxHeight;
 
+    [Header("Events")]
     [Tooltip("Game lose event")]
     [SerializeField]
     private GameEvent GameLoseEvent;
 
+    [Tooltip("Obstacle hit event")]
     [SerializeField]
-    private GameEventWithArg OnObstacleHit;
+    private GameEventWithObjAndStr OnObstacleHit;
+
+    //Fish Pool
+    private ObjectPool<GameObject> FishPool;
 
     private void Start()
     {
@@ -35,6 +39,9 @@ public class FlockController : MonoBehaviour
         AddActionListerForEvents();
     }
 
+    /// <summary>
+    /// Initialize fish pool
+    /// </summary>
     void InitializeFishPool() {
         //Initialize the pool
         FishPool = new ObjectPool<GameObject>(() =>
@@ -51,10 +58,16 @@ public class FlockController : MonoBehaviour
         MaxNoOfFish.Value
         );
     }
+    /// <summary>
+    /// Add dynamic callback to event
+    /// </summary>
     void AddActionListerForEvents() {
         OnObstacleHit.Event.AddListener(ReleaseFish);
     }
 
+    /// <summary>
+    /// Activate all fish from pool
+    /// </summary>
     public void ActivateAll() {
 
         int max = MaxNoOfFish.Value;
@@ -67,7 +80,11 @@ public class FlockController : MonoBehaviour
             max--;
         }
     }
-
+    /// <summary>
+    /// Release given fish to pool
+    /// </summary>
+    /// <param name="fish"></param>
+    /// <param name="_obstacle"></param>
     public void ReleaseFish(GameObject fish, string _obstacle)
     {
         FishPool.Release(fish);
@@ -76,7 +93,9 @@ public class FlockController : MonoBehaviour
             GameLoseEvent.Raise();
         }
     }
-
+    /// <summary>
+    /// Release all fish to pool
+    /// </summary>
     public void ReleaseAll() {
 
         FishPool.Clear();

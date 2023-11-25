@@ -1,13 +1,16 @@
-using System.Diagnostics;
 using UnityEngine.SceneManagement;
-using UnityEngine;
 public static class SceneController
 {
+    //game scenes
     public enum Scene { 
         LoadingScene,
         GameScene
     }
 
+    /// <summary>
+    /// load given scene
+    /// </summary>
+    /// <param name="scene"></param>
     public static void Load(Scene scene) {
         SceneManager.LoadScene(scene.ToString());
     }

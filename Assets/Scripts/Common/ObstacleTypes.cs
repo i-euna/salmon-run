@@ -1,4 +1,6 @@
-
+/*
+ * Types of obstacles
+ */
 public struct ObstacleNames
 {
     public const string STONE = "Stone";

@@ -2,18 +2,23 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    [Header("Mouse Position")]
     [Tooltip("Latest Position For Mouse")]
     [SerializeField]
     private Vector3Variable LastMousePosition;
 
-    [Tooltip("Event to broadcast mouse movement")]
-    [SerializeField]
-    private GameEvent MouseMoveEvent;
-
+    [Header("Camera")]
     [Tooltip("Main Camera")]
     [SerializeField]
     private Camera MainCamera;
 
+    [Header("Events")]
+    [Tooltip("Event to broadcast mouse movement")]
+    [SerializeField]
+    private GameEvent MouseMoveEvent;
+
+    [Header("Game State")]
+    [Tooltip("Carrent Game State")]
     [SerializeField]
     private GameState GameState;
 
@@ -29,7 +34,10 @@ public class PlayerInput : MonoBehaviour
             CheckMouseMovement();
         }
     }
-
+    /// <summary>
+    /// Check mouse movement
+    /// Update lastest mouse position
+    /// </summary>
     void CheckMouseMovement() {
 
         Vector3 mousePos = Input.mousePosition;

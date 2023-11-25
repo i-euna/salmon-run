@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AudioController : Singleton
 {
+    [Header("Audio Sources")]
     [Tooltip("Background music Source")]
     [SerializeField]
     private AudioSource Music;
@@ -22,9 +23,10 @@ public class AudioController : Singleton
     [SerializeField]
     private AudioSource Human;
 
+    [Header("Events")]
     [Tooltip("Event for obstacle hit")]
     [SerializeField]
-    private GameEventWithArg OnObstacleHit;
+    private GameEventWithObjAndStr OnObstacleHit;
 
     private void Start()
     {
@@ -33,6 +35,9 @@ public class AudioController : Singleton
         AddActionListenerForEvents();
     }
 
+    /// <summary>
+    /// Dynamic callback for event
+    /// </summary>
     private void AddActionListenerForEvents() {
         OnObstacleHit.Event.AddListener(PlayObstacleSound);
     }

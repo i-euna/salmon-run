@@ -1,8 +1,8 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(menuName = "Custom/GameEventWithArg")]
-public class GameEventWithArg : ScriptableObject
+[CreateAssetMenu(menuName = "Custom/GameEventWithObjAndStr")]
+public class GameEventWithObjAndStr : ScriptableObject
 {
     public UnityEvent<GameObject, string> Event;
 

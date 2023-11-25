@@ -2,27 +2,32 @@ using UnityEngine;
 
 public class FishBehavior : MonoBehaviour
 {
+    [Header("Fish Movement")]
+    [Tooltip("Fish Movement Speed")]
     [SerializeField]
     private FloatVariable MovementSpeed;
-
+    [Tooltip("Mouse Position Holder")]
     [SerializeField]
     private Vector3Variable TargetPosition;
 
-    private float zPos;
-
+    [Header("Events")]
     [Tooltip("Game over event")]
     [SerializeField]
     private GameEvent GameOverEvent;
 
     [Tooltip("Hit obstacle event")]
     [SerializeField]
-    private GameEventWithArg OnObstacleHit;
+    private GameEventWithObjAndStr OnObstacleHit;
+
+    private float zPos;
 
     private void Start()
     {
         zPos = transform.position.z;
     }
-
+    /// <summary>
+    /// Move and rotate object towards target
+    /// </summary>
     public void MoveAndRotateTowardsTarget()
     {
         Vector3 targetPosition = new Vector3(TargetPosition.Value.x, 
