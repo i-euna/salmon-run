@@ -10,31 +10,17 @@ public class FishBehavior : MonoBehaviour
 
     private float zPos;
 
-    private FlockController controller;
-
     [Tooltip("Game over event")]
     [SerializeField]
     private GameEvent GameOverEvent;
 
-    [Tooltip("Hit stone event")]
-    [SerializeField]
-    private GameEvent HitStoneEvent;
-
-    [Tooltip("Hit bear event")]
-    [SerializeField]
-    private GameEvent HitBearEvent;
-
-    [Tooltip("Hit fisherman event")]
-    [SerializeField]
-    private GameEvent HitFishermanEvent;
-
+    [Tooltip("Hit obstacle event")]
     [SerializeField]
     private GameEventWithArg OnObstacleHit;
 
     private void Start()
     {
         zPos = transform.position.z;
-        controller = transform.parent.GetComponent<FlockController>();
     }
 
     public void MoveAndRotateTowardsTarget()
@@ -60,16 +46,12 @@ public class FishBehavior : MonoBehaviour
                 break;
             case ObstacleNames.STONE:
                 OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.STONE);
-                HitStoneEvent.Raise();
                 break;
             case ObstacleNames.FISHERMAN:
                 OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.FISHERMAN);
-                HitFishermanEvent.Raise();
                 break;
             case ObstacleNames.BEAR:
                 OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.BEAR);
-                Debug.Log("Hit bear");
-                HitBearEvent.Raise();
                 break;
             default:
                 break;

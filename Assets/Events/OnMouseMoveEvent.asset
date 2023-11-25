@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36a194b70750f994aac340c508800ca8, type: 3}
-  m_Name: GameLost
+  m_Name: OnMouseMoveEvent
   m_EditorClassIdentifier: 
