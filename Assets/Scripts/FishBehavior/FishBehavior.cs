@@ -29,7 +29,7 @@ public class FishBehavior : MonoBehaviour
     private GameEvent HitFishermanEvent;
 
     [SerializeField]
-    private DynamicEvent TestEvent;
+    private GameEventWithArg OnObstacleHit;
 
     private void Start()
     {
@@ -59,17 +59,17 @@ public class FishBehavior : MonoBehaviour
                 GameOverEvent.Raise();
                 break;
             case "Stone":
-                TestEvent.InvokeEvent(gameObject);
+                OnObstacleHit.InvokeEvent(gameObject);
                 HitStoneEvent.Raise();
                 break;
             case "Fisherman":
                 Debug.Log("Hit fisherman");
-                TestEvent.InvokeEvent(gameObject);
+                OnObstacleHit.InvokeEvent(gameObject);
                 //Release to pool
                 HitFishermanEvent.Raise();
                 break;
             case "Bear":
-                TestEvent.InvokeEvent(gameObject);
+                OnObstacleHit.InvokeEvent(gameObject);
                 Debug.Log("Hit bear");
                 HitBearEvent.Raise();
                 break;
