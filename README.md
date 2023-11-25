@@ -1,8 +1,17 @@
 # SalmonRun
 Made at Global Game Jam, Pärnu
 
+## Featuring
+1. Unity Event System
+2. Scriptable Object
+3. Observer Design Pattern
+4. Modular, Documented Code
+5. Object Pooling
 
-Credits: <br>
+## Unity Version
+2022.3.10f1 LTS
+
+## Credits
 Game Development: Mykhailo Stavrovskyi, Euna Islam<br>
 Art & Animation: Kadir Alp Yaltı, Sarthak Chandra Gautam<br>
 Audio & Narrative Design: Nail Türkoğlu<br>
