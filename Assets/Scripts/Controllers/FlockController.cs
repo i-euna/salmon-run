@@ -25,10 +25,15 @@ public class FlockController : MonoBehaviour
     [SerializeField]
     private GameEvent GameLoseEvent;
 
+    [SerializeField]
+    private DynamicEvent TestEvent;
+
     private void Start()
     {
         InitializeFishPool();
         ActivateAll();
+
+        TestEvent.Event.AddListener(ReleaseFish);
     }
 
     void InitializeFishPool() {

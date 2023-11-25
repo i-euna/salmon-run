@@ -8350,6 +8350,7 @@ MonoBehaviour:
   HitStoneEvent: {fileID: 11400000, guid: 833b67f77e46107479cb4786926fdaff, type: 2}
   HitBearEvent: {fileID: 11400000, guid: 400b92577b0d22e468a396b665a282bf, type: 2}
   HitFishermanEvent: {fileID: 11400000, guid: 9fcabb1e66ab00a42b9b16ed7d58ccb3, type: 2}
+  TestEvent: {fileID: 11400000, guid: 18988ebd370ef6a41902f8fc82660575, type: 2}
 --- !u!1 &2049343047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
@@ -8465,6 +8466,7 @@ MonoBehaviour:
   MaxWidth: {fileID: 11400000, guid: 436f2ad6b171af242a62d8f46a39ffdb, type: 2}
   MaxHeight: {fileID: 11400000, guid: 055b2f6d624cc324680b59b2ed6a7f5f, type: 2}
   GameLoseEvent: {fileID: 11400000, guid: ea3559a8e2ec6a94c9b98ddc6daaee19, type: 2}
+  TestEvent: {fileID: 11400000, guid: 18988ebd370ef6a41902f8fc82660575, type: 2}
 --- !u!114 &2059954183
 MonoBehaviour:
   m_ObjectHideFlags: 0

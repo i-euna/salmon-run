@@ -28,6 +28,9 @@ public class FishBehavior : MonoBehaviour
     [SerializeField]
     private GameEvent HitFishermanEvent;
 
+    [SerializeField]
+    private DynamicEvent TestEvent;
+
     private void Start()
     {
         zPos = transform.position.z;
@@ -56,20 +59,19 @@ public class FishBehavior : MonoBehaviour
                 GameOverEvent.Raise();
                 break;
             case "Stone":
-                //Release to pool
+                TestEvent.InvokeEvent(gameObject);
                 HitStoneEvent.Raise();
-                controller.ReleaseFish(gameObject);
                 break;
             case "Fisherman":
                 Debug.Log("Hit fisherman");
+                TestEvent.InvokeEvent(gameObject);
                 //Release to pool
                 HitFishermanEvent.Raise();
-                controller.ReleaseFish(gameObject);
                 break;
             case "Bear":
+                TestEvent.InvokeEvent(gameObject);
                 Debug.Log("Hit bear");
                 HitBearEvent.Raise();
-                controller.ReleaseFish(gameObject);
                 break;
             default:
                 break;
