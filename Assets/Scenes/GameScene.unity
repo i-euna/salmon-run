@@ -8152,6 +8152,10 @@ PrefabInstance:
       propertyPath: m_EdgeRadius
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 6589352234191034750, guid: cb138fa77158a83439a8e65437084c67, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7461378180092518222, guid: cb138fa77158a83439a8e65437084c67, type: 3}
       propertyPath: m_EdgeRadius
       value: 0.4
@@ -9159,6 +9163,10 @@ PrefabInstance:
     - target: {fileID: 4630394603338981346, guid: cb138fa77158a83439a8e65437084c67, type: 3}
       propertyPath: m_EdgeRadius
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589352234191034750, guid: cb138fa77158a83439a8e65437084c67, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7461378180092518222, guid: cb138fa77158a83439a8e65437084c67, type: 3}
       propertyPath: m_EdgeRadius

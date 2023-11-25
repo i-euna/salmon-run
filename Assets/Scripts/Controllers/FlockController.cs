@@ -64,6 +64,7 @@ public class FlockController : MonoBehaviour
     public void ReleaseFish(GameObject fish)
     {
         FishPool.Release(fish);
+        //check remaining amount
         if (FishPool.CountActive == 0) {
             GameLoseEvent.Raise();
         }
