@@ -11,6 +11,10 @@ public class AudioController : Singleton
     [SerializeField]
     private AudioSource Ambient;
 
+    [Tooltip("Obstacle sound source")]
+    [SerializeField]
+    private AudioSource ObstacleSource;
+
     [Tooltip("Stone sound source")]
     [SerializeField]
     private AudioSource Stone;
@@ -22,6 +26,10 @@ public class AudioController : Singleton
     [Tooltip("Human sound source")]
     [SerializeField]
     private AudioSource Human;
+
+    [Tooltip("Obstacle sound clips")]
+    [SerializeField]
+    private AudioClip[] AudioClips;
 
     [Header("Events")]
     [Tooltip("Event for obstacle hit")]
@@ -66,19 +74,28 @@ public class AudioController : Singleton
     /// <param name="_fish">fish game object</param>
     /// <param name="obstacle">obstacle type</param>
     public void PlayObstacleSound(GameObject _fish, string obstacle) {
+        int index = 0;
         switch (obstacle)
         {
             case ObstacleNames.STONE:
-                Stone.Play();
+                index = (int)ObstacleAudioClips.STONE;
                 break;
             case ObstacleNames.FISHERMAN:
-                Human.Play();
+                index = (int)ObstacleAudioClips.FISHERMAN;
                 break;
             case ObstacleNames.BEAR:
-                Bear.Play();
+                index = (int)ObstacleAudioClips.BEAR;
                 break;
             default:
                 break;
         }
+        ObstacleSource.clip = AudioClips[index];
+        ObstacleSource.Play();
     }
+}
+
+public enum ObstacleAudioClips { 
+    STONE,
+    FISHERMAN,
+    BEAR
 }
