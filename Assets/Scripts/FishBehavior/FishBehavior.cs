@@ -17,7 +17,7 @@ public class FishBehavior : MonoBehaviour
 
     [Tooltip("Hit obstacle event")]
     [SerializeField]
-    private GameEventWithObjAndStr OnObstacleHit;
+    private GameEvent OnObstacleHit;
 
     private float zPos;
 
@@ -44,19 +44,23 @@ public class FishBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        switch (collision.collider.tag) {
+        switch (collision.collider.tag)
+        {
             case ObstacleNames.ENDPOINT:
                 //Game Over
                 GameOverEvent.Raise();
                 break;
             case ObstacleNames.STONE:
-                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.STONE);
+                DeathRow.FishDeathRow.Enqueue(gameObject);
+                OnObstacleHit.Raise();
                 break;
             case ObstacleNames.FISHERMAN:
-                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.FISHERMAN);
+                OnObstacleHit.Raise();
+                DeathRow.FishDeathRow.Enqueue(gameObject);
                 break;
             case ObstacleNames.BEAR:
-                OnObstacleHit.InvokeEvent(gameObject, ObstacleNames.BEAR);
+                DeathRow.FishDeathRow.Enqueue(gameObject);
+                OnObstacleHit.Raise();
                 break;
             default:
                 break;

@@ -265,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81890289}
   - component: {fileID: 81890290}
+  - component: {fileID: 81890291}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -308,14 +309,39 @@ MonoBehaviour:
   Music: {fileID: 1404115605}
   Ambient: {fileID: 1258098988}
   ObstacleSource: {fileID: 180315858}
-  Stone: {fileID: 1376785961}
-  Bear: {fileID: 1544665487}
-  Human: {fileID: 201582422}
   AudioClips:
   - {fileID: 8300000, guid: a17d4c3078acb084a998a225ec76f274, type: 3}
   - {fileID: 8300000, guid: 2e714bebe72d81c46b5870687e1b9cc1, type: 3}
   - {fileID: 8300000, guid: 6196506499eb0cd4bab0501e0ec27ad9, type: 3}
   OnObstacleHit: {fileID: 11400000, guid: 18988ebd370ef6a41902f8fc82660575, type: 2}
+--- !u!114 &81890291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81890288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16fb38f7bcd8f948a414ab4d9ab7143, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IntEvent: {fileID: 11400000, guid: 1be582182f3ad2f449e5b30e8ff36832, type: 2}
+  OnIntEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 81890290}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: PlayObstacleSound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &134551757
 GameObject:
   m_ObjectHideFlags: 0

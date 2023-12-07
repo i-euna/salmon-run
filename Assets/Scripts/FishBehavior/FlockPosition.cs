@@ -13,6 +13,10 @@ public class FlockPosition : MonoBehaviour
     [SerializeField]
     private float xClampValue;
 
+    [Tooltip("Hit obstacle event")]
+    [SerializeField]
+    private GameEventWithInt OnObstacleHit;
+
     private Vector3 InitialPos;
     
     private float zPos;
@@ -40,5 +44,25 @@ public class FlockPosition : MonoBehaviour
     public void Reset()
     {
         transform.position = InitialPos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log("OnTriggerEnter2D");
+        switch (collision.tag)
+        {
+            case ObstacleNames.STONE:
+                Debug.Log("OnTriggerEnter2D");
+                OnObstacleHit.InvokeEvent((int)ObstacleAudioClips.STONE);
+                break;
+            case ObstacleNames.FISHERMAN:
+                OnObstacleHit.InvokeEvent((int)ObstacleAudioClips.FISHERMAN);
+                break;
+            case ObstacleNames.BEAR:
+                OnObstacleHit.InvokeEvent((int)ObstacleAudioClips.BEAR);
+                break;
+            default:
+                break;
+        }
     }
 }
