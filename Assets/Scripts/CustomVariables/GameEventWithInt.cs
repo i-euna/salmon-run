@@ -8,7 +8,6 @@ public class GameEventWithInt : ScriptableObject
 
     public void InvokeEvent(int i)
     {
-        Debug.Log("Event raised");
         if(OnEvent != null)
             OnEvent.Invoke(i);
     }

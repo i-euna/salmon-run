@@ -52,7 +52,6 @@ public class FlockPosition : MonoBehaviour
         switch (collision.tag)
         {
             case ObstacleNames.STONE:
-                Debug.Log("OnTriggerEnter2D");
                 OnObstacleHit.InvokeEvent((int)ObstacleAudioClips.STONE);
                 break;
             case ObstacleNames.FISHERMAN:

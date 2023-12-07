@@ -35,8 +35,8 @@ public class AudioController : Singleton
     /// </summary>
     private void PlayBackgroundMusic()
     {
-        //Music.loop = true;
-        //Music.Play();
+        Music.loop = true;
+        Music.Play();
     }
 
     /// <summary>
@@ -44,8 +44,8 @@ public class AudioController : Singleton
     /// </summary>
     private void PlayAmbientSound()
     {
-        //Ambient.loop = true;
-        //Ambient.Play();
+        Ambient.loop = true;
+        Ambient.Play();
     }
 
     /// <summary>
@@ -54,6 +54,7 @@ public class AudioController : Singleton
     /// <param name="_fish">fish game object</param>
     /// <param name="obstacle">obstacle type</param>
     public void PlayObstacleSound(int index) {
+        ObstacleSource.volume = index == (int)ObstacleAudioClips.STONE ? 0.5f : 1;
         ObstacleSource.clip = AudioClips[index];
         ObstacleSource.Play();
     }

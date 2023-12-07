@@ -76,11 +76,10 @@ public class FlockController : MonoBehaviour
     /// <summary>
     /// Release given fish to pool
     /// </summary>
-    /// <param name="fish"></param>
-    /// <param name="_obstacle"></param>
     public void ReleaseFish()
     {
-        FishPool.Release(DeathRow.FishDeathRow.Dequeue());
+        if(DeathRow.FishDeathRow.Count != 0)
+            FishPool.Release(DeathRow.FishDeathRow.Dequeue());
         //check remaining amount
         if (FishPool.CountActive == 0) {
             GameLoseEvent.Raise();

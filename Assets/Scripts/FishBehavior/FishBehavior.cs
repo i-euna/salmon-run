@@ -51,13 +51,8 @@ public class FishBehavior : MonoBehaviour
                 GameOverEvent.Raise();
                 break;
             case ObstacleNames.STONE:
-                DeathRow.FishDeathRow.Enqueue(gameObject);
-                OnObstacleHit.Raise();
                 break;
             case ObstacleNames.FISHERMAN:
-                OnObstacleHit.Raise();
-                DeathRow.FishDeathRow.Enqueue(gameObject);
-                break;
             case ObstacleNames.BEAR:
                 DeathRow.FishDeathRow.Enqueue(gameObject);
                 OnObstacleHit.Raise();
