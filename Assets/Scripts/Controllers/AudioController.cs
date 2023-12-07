@@ -11,17 +11,13 @@ public class AudioController : Singleton
     [SerializeField]
     private AudioSource Ambient;
 
-    [Tooltip("Stone sound source")]
+    [Tooltip("Obstacle sound source")]
     [SerializeField]
-    private AudioSource Stone;
+    private AudioSource ObstacleSource;
 
-    [Tooltip("Bear sound source")]
+    [Tooltip("Obstacle sound clips")]
     [SerializeField]
-    private AudioSource Bear;
-
-    [Tooltip("Human sound source")]
-    [SerializeField]
-    private AudioSource Human;
+    private AudioClip[] AudioClips;
 
     [Header("Events")]
     [Tooltip("Event for obstacle hit")]
@@ -32,14 +28,6 @@ public class AudioController : Singleton
     {
         PlayBackgroundMusic();
         PlayAmbientSound();
-        AddActionListenerForEvents();
-    }
-
-    /// <summary>
-    /// Dynamic callback for event
-    /// </summary>
-    private void AddActionListenerForEvents() {
-        OnObstacleHit.Event.AddListener(PlayObstacleSound);
     }
 
     /// <summary>
@@ -65,20 +53,15 @@ public class AudioController : Singleton
     /// </summary>
     /// <param name="_fish">fish game object</param>
     /// <param name="obstacle">obstacle type</param>
-    public void PlayObstacleSound(GameObject _fish, string obstacle) {
-        switch (obstacle)
-        {
-            case ObstacleNames.STONE:
-                Stone.Play();
-                break;
-            case ObstacleNames.FISHERMAN:
-                Human.Play();
-                break;
-            case ObstacleNames.BEAR:
-                Bear.Play();
-                break;
-            default:
-                break;
-        }
+    public void PlayObstacleSound(int index) {
+        ObstacleSource.volume = index == (int)ObstacleAudioClips.STONE ? 0.5f : 1;
+        ObstacleSource.clip = AudioClips[index];
+        ObstacleSource.Play();
     }
+}
+
+public enum ObstacleAudioClips { 
+    STONE,
+    FISHERMAN,
+    BEAR
 }

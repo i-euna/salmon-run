@@ -27,7 +27,7 @@ public class FlockController : MonoBehaviour
 
     [Tooltip("Obstacle hit event")]
     [SerializeField]
-    private GameEventWithObjAndStr OnObstacleHit;
+    private GameEvent OnObstacleHit;
 
     //Fish Pool
     private ObjectPool<GameObject> FishPool;
@@ -36,7 +36,6 @@ public class FlockController : MonoBehaviour
     {
         InitializeFishPool();
         ActivateAll();
-        AddActionListerForEvents();
     }
 
     /// <summary>
@@ -58,12 +57,6 @@ public class FlockController : MonoBehaviour
         MaxNoOfFish.Value
         );
     }
-    /// <summary>
-    /// Add dynamic callback to event
-    /// </summary>
-    void AddActionListerForEvents() {
-        OnObstacleHit.Event.AddListener(ReleaseFish);
-    }
 
     /// <summary>
     /// Activate all fish from pool
@@ -83,11 +76,10 @@ public class FlockController : MonoBehaviour
     /// <summary>
     /// Release given fish to pool
     /// </summary>
-    /// <param name="fish"></param>
-    /// <param name="_obstacle"></param>
-    public void ReleaseFish(GameObject fish, string _obstacle)
+    public void ReleaseFish()
     {
-        FishPool.Release(fish);
+        if(DeathRow.FishDeathRow.Count != 0)
+            FishPool.Release(DeathRow.FishDeathRow.Dequeue());
         //check remaining amount
         if (FishPool.CountActive == 0) {
             GameLoseEvent.Raise();

@@ -1989,8 +1989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LastMousePosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
-  MouseMoveEvent: {fileID: 11400000, guid: 9c79ae4099b4c5c43941d6ec14386bdd, type: 2}
   MainCamera: {fileID: 1813688622}
+  MouseMoveEvent: {fileID: 11400000, guid: 9c79ae4099b4c5c43941d6ec14386bdd, type: 2}
   GameState: {fileID: 11400000, guid: 71cda207be0a7574987607b2c28e5840, type: 2}
 --- !u!1001 &458662408
 PrefabInstance:
@@ -3386,6 +3386,7 @@ GameObject:
   - component: {fileID: 7553416674358838679}
   - component: {fileID: 7553416674358838680}
   - component: {fileID: 7553416674358838681}
+  - component: {fileID: 7553416674358838682}
   m_Layer: 0
   m_Name: FlockPos
   m_TagString: Untagged
@@ -8347,10 +8348,7 @@ MonoBehaviour:
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
   GameOverEvent: {fileID: 11400000, guid: 43441c7426cb4964894b0e2dfdd70325, type: 2}
-  HitStoneEvent: {fileID: 11400000, guid: 833b67f77e46107479cb4786926fdaff, type: 2}
-  HitBearEvent: {fileID: 11400000, guid: 400b92577b0d22e468a396b665a282bf, type: 2}
-  HitFishermanEvent: {fileID: 11400000, guid: 9fcabb1e66ab00a42b9b16ed7d58ccb3, type: 2}
-  OnObstacleHit: {fileID: 11400000, guid: 18988ebd370ef6a41902f8fc82660575, type: 2}
+  OnObstacleHit: {fileID: 11400000, guid: d148fc3ad20c6f241b9530cbafbbd0fe, type: 2}
 --- !u!1 &2049343047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1468643669832072267, guid: 691d80d96d662b84ba3fd39b2c2f7189, type: 3}
@@ -8427,6 +8425,7 @@ GameObject:
   - component: {fileID: 2059954182}
   - component: {fileID: 2059954183}
   - component: {fileID: 2059954184}
+  - component: {fileID: 2059954185}
   m_Layer: 0
   m_Name: FlockManager
   m_TagString: Untagged
@@ -8466,7 +8465,7 @@ MonoBehaviour:
   MaxWidth: {fileID: 11400000, guid: 436f2ad6b171af242a62d8f46a39ffdb, type: 2}
   MaxHeight: {fileID: 11400000, guid: 055b2f6d624cc324680b59b2ed6a7f5f, type: 2}
   GameLoseEvent: {fileID: 11400000, guid: ea3559a8e2ec6a94c9b98ddc6daaee19, type: 2}
-  OnObstacleHit: {fileID: 11400000, guid: 18988ebd370ef6a41902f8fc82660575, type: 2}
+  OnObstacleHit: {fileID: 11400000, guid: d148fc3ad20c6f241b9530cbafbbd0fe, type: 2}
 --- !u!114 &2059954183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8514,6 +8513,34 @@ MonoBehaviour:
       - m_Target: {fileID: 2059954182}
         m_TargetAssemblyTypeName: FlockController, Assembly-CSharp
         m_MethodName: ActivateAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2059954185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059954180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486c8936dddf900459b98a54f2fa81b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d148fc3ad20c6f241b9530cbafbbd0fe, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2059954182}
+        m_TargetAssemblyTypeName: FlockController, Assembly-CSharp
+        m_MethodName: ReleaseFish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9408,7 +9435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: {fileID: 11400000, guid: 849fb377dcd24804280f99fb0b1f54ab, type: 2}
   TargetPosition: {fileID: 11400000, guid: 96e3128a51841794fa9e6be6b5426504, type: 2}
-  xClampValue: 4
+  xClampValue: 5
+  OnObstacleHit: {fileID: 11400000, guid: 1be582182f3ad2f449e5b30e8ff36832, type: 2}
 --- !u!114 &7553416674358838681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9437,6 +9465,41 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!58 &7553416674358838682
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822057662}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1001 &7911071992521303687
 PrefabInstance:
   m_ObjectHideFlags: 0
